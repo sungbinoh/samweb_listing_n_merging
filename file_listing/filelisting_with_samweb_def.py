@@ -5,14 +5,15 @@ import samweb_cli
 from ROOT import TFile, gDirectory
 import subprocess
 
-#print(sys.argv[1])
-
 #this_query = "production.type polaris and sbnd_project.stage reco2 and file_name like hist%run" + sys.argv[1] + "%"
 this_query = "mc_MCP2025Av3_prodcorsika_proton_intime_sbnd_CV_reco2_sbnd"
-samweb = samweb_cli.SAMWebClient(experiment='sbnd')
+experiment = 'sbnd'
+output_file_name = "list_Spring25Dev_mc_intimecosmics_flatcaf.txt"
+
+samweb = samweb_cli.SAMWebClient(experiment=experiment)
 files = samweb.listFiles(defname=this_query)
 
-f = open("list_Spring25Dev_mc_intimecosmics_flatcaf.txt", "w")
+f = open(output_file_name, "w")
 
 for file in files:
     loc = samweb.locateFile(file)
