@@ -44,6 +44,8 @@ make_largest_root_filelist.py
 ## Scripts for submitting grid jobs for merging files: hadd root files
 
 Thses scrips are from Jeasung Kim (jedori0228).
+You do not need to open an SL7 container for these scripts.
+Please make sure that you have a valid token/proxy for a grid job submission.
 
 ```
 makeScripts.py
